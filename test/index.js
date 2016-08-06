@@ -2,7 +2,15 @@ const Simon = require('../index')
 const tap = require('tap')
 
 tap.test('simon', tap => {
-  tap.plan(6)
+  tap.plan(7)
+
+  tap.test('skip execution if no handler provided', assert => {
+    assert.plan(1)
+
+    new Simon((resolve, reject) => reject('foo'))
+      .catch('foo')
+      .catch(error => assert.equal(error, 'foo'))
+  })
 
   tap.test('default behaviour', assert => {
     assert.plan(1)
