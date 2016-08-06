@@ -1,6 +1,6 @@
 # simon [![version][npm-version]][npm-url] [![License][npm-license]][license-url]
 
-> unnamed package
+> Simon is a Promise extension that provides filtered catch handler ... made for Simon.
 
 [![Build Status][travis-image]][travis-url]
 [![Downloads][npm-downloads]][npm-url]
@@ -11,50 +11,58 @@
 ## Install
 
 ```bash
-npm install --production --save simon
-```
-
-## Usage
-
-I reccomend using an optimized build matching your Node.js environment version, otherwise, the standard `require` would work just fine.
-
-```js
-/*
- * Node 6
- * Built using `babel-preset-es2015-node6`
- */
-const simon = require('simon/lib/node6')
-
-/*
- * Node 5
- * Built using `babel-preset-es2015-node5`
- */
-const simon = require('simon/lib/node5')
-
-/*
- * Node 4
- * Built using `babel-preset-es2015-node4`
- */
-const simon = require('simon/lib/node4')
-
-/*
- * Node >=0.10 <=0.12
- * Built using `babel-preset-es2015`
- * Note: 
- *   - additional package is required: `babel-runtime`
- *   - npm install --save babel-runtime
- */
-var simon = require('simon')
+npm install --production --save simon-promise
 ```
 
 ## API
 
-### simon()
+The same native [Promise API](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise) applies, the only difference is the `catch()` method.
+
+### .catch(onRejected)
+
+Behaves normally as per the native [Promise API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)
+
+### .catch(class ErrorClass | class CustomErrorClass | ... , onRejected)
+
+A filtered variant of `catch` (like other non-JS languages typically have) that lets you only handle specific errors.
+
+The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+
+###### Example:
 
 ```js
-import simon from 'simon'
+somePromise
+  .then(_ => return a.b.c.d())
+  .catch(TypeError, error => {
+    // If the error is a "TypeError", this code block will execute
+  })
 
-simon()
+  .catch(ReferenceError, error => {
+    // If the error is a "ReferenceError", this code block will execute instead
+  })
+
+  .catch(error => {
+  // Generic catch-the rest (error wasn't TypeError nor ReferenceError)
+  })
+```
+
+You may also add multiple filters for a catch handler:
+
+```js
+somePromise
+  .then(_ => return a.b.c.d())
+
+  .catch(TypeError, ReferenceError, error => {
+    // Will end up here on programmer error
+  })
+
+  .catch(NetworkError, TimeoutError, error => {
+    // Will end up here on expected everyday network errors
+  })
+
+  .catch(error => {
+    // Catch any unexpected errors
+  })
 ```
 
 ----

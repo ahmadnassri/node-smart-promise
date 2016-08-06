@@ -1,6 +1,6 @@
 {
-  "name": "simon",
-  "description": "unnamed package",
+  "name": "simon-promise",
+  "description": "a Promise extension that provides filtered catch handler",
   "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
   "homepage": "https://github.com/ahmadnassri/simon",
   "repository": {
