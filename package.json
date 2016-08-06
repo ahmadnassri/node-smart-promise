@@ -1,0 +1,46 @@
+{
+  "name": "simon",
+  "description": "unnamed package",
+  "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
+  "homepage": "https://github.com/ahmadnassri/simon",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmadnassri/simon.git"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "keywords": [
+    "simon",
+    "promise"
+  ],
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+    "src"
+  ],
+  "bugs": {
+    "url": "https://github.com/ahmadnassri/simon/issues"
+  },
+  "scripts": {
+    "test": "tap test/*.js | tap-mocha-reporter spec",
+    "pretest": "standard && echint",
+    "coverage": "tap test/*.js --coverage",
+    "codeclimate": "nyc report --reporter=text-lcov | codeclimate-test-reporter",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "codeclimate-test-reporter": "^0.3.3",
+    "cz-conventional-changelog": "^1.1.6",
+    "echint": "^1.5.3",
+    "semantic-release": "^6.3.0",
+    "standard": "^7.1.2",
+    "tap": "^6.3.0",
+    "tap-mocha-reporter": "0.0.27"
+  }
+}
