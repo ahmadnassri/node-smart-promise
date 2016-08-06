@@ -76,10 +76,10 @@ somePromise
 [travis-url]: https://travis-ci.org/ahmadnassri/simon
 [travis-image]: https://img.shields.io/travis/ahmadnassri/simon.svg?style=flat-square
 
-[npm-url]: https://www.npmjs.com/package/simon
-[npm-license]: https://img.shields.io/npm/l/simon.svg?style=flat-square
-[npm-version]: https://img.shields.io/npm/v/simon.svg?style=flat-square
-[npm-downloads]: https://img.shields.io/npm/dm/simon.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/simon-promise
+[npm-license]: https://img.shields.io/npm/l/simon-promise.svg?style=flat-square
+[npm-version]: https://img.shields.io/npm/v/simon-promise.svg?style=flat-square
+[npm-downloads]: https://img.shields.io/npm/dm/simon-promise.svg?style=flat-square
 
 [codeclimate-url]: https://codeclimate.com/github/ahmadnassri/simon
 [codeclimate-quality]: https://img.shields.io/codeclimate/github/ahmadnassri/simon.svg?style=flat-square
