@@ -8,6 +8,15 @@
 [![Coverage Status][codeclimate-coverage]][codeclimate-url]
 [![Dependencies][david-image]][david-url]
 
+## Benchamrks 
+
+[latest results](https://github.com/ahmadnassri/benchmark-node-promise-catch):
+
+```
+  bluebird      x  3,541 ops/sec ±1.70% (82 runs sampled)
+  simon-promise x 99,766 ops/sec ±1.24% (86 runs sampled)
+```
+
 ## Install
 
 ```bash
