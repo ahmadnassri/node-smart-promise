@@ -1,6 +1,6 @@
-# simon [![version][npm-version]][npm-url] [![License][npm-license]][license-url]
+# Simon Promise [![version][npm-version]][npm-url] [![License][npm-license]][license-url]
 
-> Simon is a Promise extension that provides filtered catch handler ... made for Simon.
+> Simon is a Promise extension that provides filtered catch handler ... made for a friend named Simon.
 
 [![Build Status][travis-image]][travis-url]
 [![Downloads][npm-downloads]][npm-url]
