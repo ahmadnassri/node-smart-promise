@@ -36,11 +36,11 @@
   },
   "devDependencies": {
     "codeclimate-test-reporter": "^0.3.3",
-    "cz-conventional-changelog": "^1.1.6",
+    "cz-conventional-changelog": "^1.2.0",
     "echint": "^1.5.3",
     "semantic-release": "^6.3.0",
-    "standard": "^7.1.2",
-    "tap": "^6.3.0",
-    "tap-mocha-reporter": "0.0.27"
+    "standard": "^8.0.0-beta.5",
+    "tap": "^6.3.2",
+    "tap-mocha-reporter": "2.0.1"
   }
 }
