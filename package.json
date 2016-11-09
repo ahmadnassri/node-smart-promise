@@ -1,30 +1,30 @@
 {
-  "name": "simon-promise",
+  "name": "smart-promise",
   "description": "a Promise extension that provides filtered catch handler",
   "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
-  "homepage": "https://github.com/ahmadnassri/simon",
+  "homepage": "https://github.com/ahmadnassri/smart-promise",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ahmadnassri/simon.git"
+    "url": "https://github.com/ahmadnassri/smart-promise.git"
   },
   "license": "ISC",
   "main": "index.js",
   "keywords": [
-    "simon",
+    "smart",
     "promise"
   ],
   "engines": {
     "node": ">=6"
   },
   "files": [
-    "src"
+    "index.js"
   ],
   "bugs": {
-    "url": "https://github.com/ahmadnassri/simon/issues"
+    "url": "https://github.com/ahmadnassri/smart-promise/issues"
   },
   "scripts": {
     "test": "tap test/*.js | tap-mocha-reporter spec",
-    "pretest": "standard && echint",
+    "pretest": "snazzy && echint",
     "coverage": "tap test/*.js --coverage",
     "codeclimate": "nyc report --reporter=text-lcov | codeclimate-test-reporter",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -38,9 +38,9 @@
     "codeclimate-test-reporter": "^0.4.0",
     "cz-conventional-changelog": "^1.2.0",
     "echint": "^1.5.3",
-    "semantic-release": "^6.3.0",
-    "standard": "^8.0.0-beta.5",
+    "semantic-release": "^4.3.5",
+    "snazzy": "^5.0.0",
     "tap": "^8.0.0",
-    "tap-mocha-reporter": "3.0.0"
+    "tap-mocha-reporter": "^3.0.0"
   }
 }

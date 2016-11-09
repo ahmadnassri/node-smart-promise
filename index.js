@@ -1,4 +1,4 @@
-module.exports = class Simon extends Promise {
+module.exports = class Smart extends Promise {
   catch (...args) {
     let handler = args.pop()
 

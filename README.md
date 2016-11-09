@@ -1,11 +1,12 @@
-# Simon Promise [![version][npm-version]][npm-url] [![License][npm-license]][license-url]
+# Smart Promise [![version][npm-version]][npm-url] [![License][npm-license]][license-url]
 
-> Simon is a Promise extension that provides filtered catch handler ... made for a friend named Simon.
+> Smart Promise is a Promise extension that provides filtered catch handler.
 
 [![Build Status][travis-image]][travis-url]
 [![Downloads][npm-downloads]][npm-url]
 [![Code Climate][codeclimate-quality]][codeclimate-url]
 [![Coverage Status][codeclimate-coverage]][codeclimate-url]
+[![Dependency Status][dependencyci-image]][dependencyci-url]
 [![Dependencies][david-image]][david-url]
 
 ## Benchamrks 
@@ -14,13 +15,13 @@
 
 ```
   bluebird      x  3,541 ops/sec ±1.70% (82 runs sampled)
-  simon-promise x 99,766 ops/sec ±1.24% (86 runs sampled)
+  smart-promise x 99,766 ops/sec ±1.24% (86 runs sampled)
 ```
 
 ## Install
 
 ```bash
-npm install --production --save simon-promise
+npm install --production --save smart-promise
 ```
 
 ## API
@@ -40,8 +41,13 @@ The catch handler that is first met that has eligible constructors specified, is
 ###### Example:
 
 ```js
-somePromise
+const Promise = require('smart-promise')
+```
+
+```js
+Promise
   .then(_ => return a.b.c.d())
+  
   .catch(TypeError, error => {
     // If the error is a "TypeError", this code block will execute
   })
@@ -58,7 +64,7 @@ somePromise
 You may also add multiple filters for a catch handler:
 
 ```js
-somePromise
+Promise
   .then(_ => return a.b.c.d())
 
   .catch(TypeError, ReferenceError, error => {
@@ -75,24 +81,27 @@ somePromise
 ```
 
 ----
-> :copyright: [www.ahmadnassri.com](https://www.ahmadnassri.com/) &nbsp;&middot;&nbsp;
+> :copyright: [ahmadnassri.com](https://www.ahmadnassri.com/) &nbsp;&middot;&nbsp;
 > License: [ISC][license-url] &nbsp;&middot;&nbsp;
 > Github: [@ahmadnassri](https://github.com/ahmadnassri) &nbsp;&middot;&nbsp;
 > Twitter: [@ahmadnassri](https://twitter.com/ahmadnassri)
 
 [license-url]: http://choosealicense.com/licenses/isc/
 
-[travis-url]: https://travis-ci.org/ahmadnassri/simon
-[travis-image]: https://img.shields.io/travis/ahmadnassri/simon.svg?style=flat-square
+[travis-url]: https://travis-ci.org/ahmadnassri/smart-promise
+[travis-image]: https://img.shields.io/travis/ahmadnassri/smart-promise.svg?style=flat-square
 
-[npm-url]: https://www.npmjs.com/package/simon-promise
-[npm-license]: https://img.shields.io/npm/l/simon-promise.svg?style=flat-square
-[npm-version]: https://img.shields.io/npm/v/simon-promise.svg?style=flat-square
-[npm-downloads]: https://img.shields.io/npm/dm/simon-promise.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/smart-promise
+[npm-license]: https://img.shields.io/npm/l/smart-promise.svg?style=flat-square
+[npm-version]: https://img.shields.io/npm/v/smart-promise.svg?style=flat-square
+[npm-downloads]: https://img.shields.io/npm/dm/smart-promise.svg?style=flat-square
 
-[codeclimate-url]: https://codeclimate.com/github/ahmadnassri/simon
-[codeclimate-quality]: https://img.shields.io/codeclimate/github/ahmadnassri/simon.svg?style=flat-square
-[codeclimate-coverage]: https://img.shields.io/codeclimate/coverage/github/ahmadnassri/simon.svg?style=flat-square
+[codeclimate-url]: https://codeclimate.com/github/ahmadnassri/smart-promise
+[codeclimate-quality]: https://img.shields.io/codeclimate/github/ahmadnassri/smart-promise.svg?style=flat-square
+[codeclimate-coverage]: https://img.shields.io/codeclimate/coverage/github/ahmadnassri/smart-promise.svg?style=flat-square
 
-[david-url]: https://david-dm.org/ahmadnassri/simon
-[david-image]: https://img.shields.io/david/ahmadnassri/simon.svg?style=flat-square
+[david-url]: https://david-dm.org/ahmadnassri/smart-promise
+[david-image]: https://img.shields.io/david/ahmadnassri/smart-promise.svg?style=flat-square
+
+[dependencyci-url]: https://dependencyci.com/github/ahmadnassri/smart-promise
+[dependencyci-image]: https://dependencyci.com/github/ahmadnassri/smart-promise/badge?style=flat-square

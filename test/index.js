@@ -1,13 +1,13 @@
-const Simon = require('../index')
+const Promise = require('..')
 const tap = require('tap')
 
-tap.test('simon', tap => {
+tap.test('smart-promise', tap => {
   tap.plan(7)
 
   tap.test('skip execution if no handler provided', assert => {
     assert.plan(1)
 
-    new Simon((resolve, reject) => reject('foo'))
+    new Promise((resolve, reject) => reject('foo'))
       .catch('foo')
       .catch(error => assert.equal(error, 'foo'))
   })
@@ -15,7 +15,7 @@ tap.test('simon', tap => {
   tap.test('default behaviour', assert => {
     assert.plan(1)
 
-    new Simon((resolve, reject) => reject('foo'))
+    new Promise((resolve, reject) => reject('foo'))
       .catch(error => assert.equal(error, 'foo'))
       .catch(_ => assert.fail('this should not be triggered'))
   })
@@ -23,7 +23,7 @@ tap.test('simon', tap => {
   tap.test('Error Objects', assert => {
     assert.plan(1)
 
-    new Simon((resolve, reject) => reject(new Error('foo')))
+    new Promise((resolve, reject) => reject(new Error('foo')))
       .catch(Error, error => assert.type(error, Error))
       .catch(_ => assert.fail('this should not be triggered'))
   })
@@ -31,7 +31,7 @@ tap.test('simon', tap => {
   tap.test('match one type', assert => {
     assert.plan(1)
 
-    new Simon((resolve, reject) => reject('foo'))
+    new Promise((resolve, reject) => reject('foo'))
       .catch('foo', error => assert.equal(error, 'foo'))
       .catch(_ => assert.fail('this should not be triggered'))
   })
@@ -39,7 +39,7 @@ tap.test('simon', tap => {
   tap.test('no match', assert => {
     assert.plan(1)
 
-    new Simon((resolve, reject) => reject('foo'))
+    new Promise((resolve, reject) => reject('foo'))
       .catch('bar', _ => assert.fail('this should not be triggered'))
       .catch(error => assert.equal(error, 'foo'))
   })
@@ -47,7 +47,7 @@ tap.test('simon', tap => {
   tap.test('multiple matches', assert => {
     assert.plan(1)
 
-    new Simon((resolve, reject) => reject('bar'))
+    new Promise((resolve, reject) => reject('bar'))
       .catch(Error, 'foo', 'bar', error => assert.equal(error, 'bar'))
       .catch(_ => assert.fail('this should not be triggered'))
   })
@@ -55,7 +55,7 @@ tap.test('simon', tap => {
   tap.test('immediate invocation', assert => {
     assert.plan(1)
 
-    Simon.reject('bar')
+    Promise.reject('bar')
       .catch('foo', 'bar', error => assert.equal(error, 'bar'))
       .catch(_ => assert.fail('this should not be triggered'))
   })
