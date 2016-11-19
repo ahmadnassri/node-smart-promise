@@ -9,7 +9,7 @@
 [![Dependency Status][dependencyci-image]][dependencyci-url]
 [![Dependencies][david-image]][david-url]
 
-## Benchamrks 
+## Benchamrks
 
 [latest results](https://github.com/ahmadnassri/benchmark-node-promise-catch):
 
@@ -21,7 +21,7 @@
 ## Install
 
 ```bash
-npm install --production --save smart-promise
+npm install --only=production --save smart-promise
 ```
 
 ## API
@@ -47,7 +47,7 @@ const Promise = require('smart-promise')
 ```js
 Promise
   .then(_ => return a.b.c.d())
-  
+
   .catch(TypeError, error => {
     // If the error is a "TypeError", this code block will execute
   })
