@@ -1,5 +1,8 @@
+'use strict'
+
 module.exports = class Smart extends Promise {
-  catch (...args) {
+  catch () {
+    let args = Array.from(arguments)
     let handler = args.pop()
 
     if (typeof handler !== 'function') {
@@ -13,7 +16,7 @@ module.exports = class Smart extends Promise {
         }
       }
 
-      if (args.length === 0 || args.includes(error)) {
+      if (args.length === 0 || args.indexOf(error) > -1) {
         return this.then(null, handler)
       } else {
         throw error
