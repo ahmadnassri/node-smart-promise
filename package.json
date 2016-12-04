@@ -24,9 +24,9 @@
     "url": "https://github.com/ahmadnassri/smart-promise/issues"
   },
   "scripts": {
-    "test": "tap test/*.js | tap-mocha-reporter spec",
+    "test": "tap test --reporter spec",
     "pretest": "snazzy && echint",
-    "coverage": "tap test/*.js --reporter silent --coverage",
+    "coverage": "tap test --reporter silent --coverage",
     "codeclimate": "tap --coverage-report=text-lcov | codeclimate-test-reporter",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
