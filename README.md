@@ -1,4 +1,4 @@
-# Smart Promise [![version][npm-version]][npm-url] [![License][npm-license]][license-url]
+# Smart Promise [![version][npm-version]][npm-url] [![License][license-image]][license-url]
 
 > Smart Promise is a Promise extension that provides filtered catch handler.
 
@@ -80,19 +80,19 @@ Promise
   })
 ```
 
-----
+---
 > :copyright: [ahmadnassri.com](https://www.ahmadnassri.com/) &nbsp;&middot;&nbsp;
 > License: [ISC][license-url] &nbsp;&middot;&nbsp;
 > Github: [@ahmadnassri](https://github.com/ahmadnassri) &nbsp;&middot;&nbsp;
 > Twitter: [@ahmadnassri](https://twitter.com/ahmadnassri)
 
 [license-url]: http://choosealicense.com/licenses/isc/
+[license-image]: https://img.shields.io/github/license/ahmadnassri/smart-promise.svg?style=flat-square
 
 [travis-url]: https://travis-ci.org/ahmadnassri/smart-promise
 [travis-image]: https://img.shields.io/travis/ahmadnassri/smart-promise.svg?style=flat-square
 
 [npm-url]: https://www.npmjs.com/package/smart-promise
-[npm-license]: https://img.shields.io/npm/l/smart-promise.svg?style=flat-square
 [npm-version]: https://img.shields.io/npm/v/smart-promise.svg?style=flat-square
 [npm-downloads]: https://img.shields.io/npm/dm/smart-promise.svg?style=flat-square
 

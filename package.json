@@ -24,22 +24,13 @@
     "url": "https://github.com/ahmadnassri/smart-promise/issues"
   },
   "scripts": {
-    "test": "tap test --reporter spec",
     "pretest": "snazzy && echint",
-    "coverage": "tap test --reporter silent --coverage",
-    "codeclimate": "tap --coverage-report=text-lcov | codeclimate-test-reporter",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "test": "tap test",
+    "coverage": "tap test --reporter silent --coverage"
   },
   "devDependencies": {
-    "codeclimate-test-reporter": "^0.4.0",
-    "cz-conventional-changelog": "^1.2.0",
+    "@ahmadnassri/error": "^1.1.0",
     "echint": "^2.1.0",
-    "semantic-release": "^6.3.2",
     "snazzy": "^5.0.0",
     "tap": "^8.0.1"
   }
