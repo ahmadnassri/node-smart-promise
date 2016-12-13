@@ -42,7 +42,7 @@ module.exports = class Smart extends Promise {
   catch () {
     // need at least 2
     if (arguments.length < 2) {
-      return super.then.call(this, null, ...arguments)
+      return super.then.bind(this, null).apply(this, arguments)
     }
 
     let args = Array.from(arguments)
