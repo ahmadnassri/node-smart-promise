@@ -1,3 +1,5 @@
+'use strict'
+
 const Smart = require('..')
 const tap = require('tap')
 const ExtendableError = require('@ahmadnassri/error')
