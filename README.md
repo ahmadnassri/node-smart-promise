@@ -56,6 +56,10 @@ Promise
     // If the error is a "ReferenceError", this code block will execute instead
   })
 
+  .catch('TypedErrorName', error => {
+    // If the error constructor matches "TypedErrorName", this code block will execute instead
+  })
+
   .catch(error => {
   // Generic catch-the rest (error wasn't TypeError nor ReferenceError)
   })
@@ -71,13 +75,23 @@ Promise
     // Will end up here on programmer error
   })
 
-  .catch(NetworkError, TimeoutError, error => {
+  .catch(NetworkError, TimeoutError, 'SomeError', error => {
     // Will end up here on expected everyday network errors
   })
 
   .catch(error => {
     // Catch any unexpected errors
   })
+```
+
+You can also wrap it around existing promises, this is useful for managing 3rd party generated promises:
+
+```js
+const Smart = require('smart-promise')
+const Library = require('some-other-promise-producting-library')
+
+Smart.resolve(Library.action())
+  .catch('SomeError', error => {})
 ```
 
 ---
