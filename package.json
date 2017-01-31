@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@ahmadnassri/error": "^1.1.0",
-    "echint": "^2.1.0",
+    "echint": "^3.0.0",
     "snazzy": "^5.0.0",
     "tap": "^9.0.3"
   }
