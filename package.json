@@ -24,14 +24,14 @@
     "url": "https://github.com/ahmadnassri/smart-promise/issues"
   },
   "scripts": {
-    "pretest": "snazzy && echint",
+    "pretest": "standard && echint",
     "test": "tap test",
     "coverage": "tap test --reporter silent --coverage"
   },
   "devDependencies": {
     "@ahmadnassri/error": "^1.1.0",
     "echint": "^3.0.0",
-    "snazzy": "^5.0.0",
+    "standard": "^10.0.2",
     "tap": "^10.0.1"
   }
 }
