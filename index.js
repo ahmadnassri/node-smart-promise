@@ -1,7 +1,7 @@
 'use strict'
 
-function isInstance (object, types) {
-  if (typeof object !== 'object') {
+function isInstance (error, types) {
+  if (typeof error !== 'object') {
     return false
   }
 
@@ -9,29 +9,34 @@ function isInstance (object, types) {
     switch (typeof type) {
       // error classes
       case 'function':
-        return object instanceof type
+        return error instanceof type
 
       // named errors
       case 'string':
-        return object.name === type
+        return error.name === type
     }
 
     return false
   })
 }
 
-function isRegExpMatch (string, matches) {
-  if (typeof string !== 'string') {
+function isRegExpMatch (error, matches) {
+  // if we're testing an error object, try to match against the message
+  if (typeof error === 'object' && error.message) {
+    error = error.message
+  }
+
+  if (typeof error !== 'string') {
     return false
   }
 
   return matches.some(match => {
     if (match instanceof RegExp) {
-      return match.test(string)
+      return match.test(error)
     }
 
     if (typeof match === 'string') {
-      return new RegExp(match).test(string)
+      return new RegExp(match).test(error)
     }
 
     return false

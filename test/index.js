@@ -86,6 +86,14 @@ tap.test('RegExP Like', assert => {
     .catch(err => assert.fail('should not be triggered', { err }))
 })
 
+tap.test('RegExP Error Message', assert => {
+  assert.plan(1)
+
+  return Smart.reject(new Error('foo'))
+    .catch(/fo/, error => assert.equal(error.message, 'foo'))
+    .catch(err => assert.fail('should not be triggered', { err }))
+})
+
 tap.test('Multiple RegExp', assert => {
   assert.plan(1)
 
