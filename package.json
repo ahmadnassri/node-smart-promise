@@ -32,6 +32,6 @@
     "@ahmadnassri/error": "^1.1.0",
     "echint": "^3.0.0",
     "standard": "^10.0.2",
-    "tap": "^10.0.1"
+    "tap": "^11.0.0"
   }
 }
