@@ -1,13 +1,6 @@
-# Smart Promise [![version][npm-version]][npm-url] [![License][license-image]][license-url]
+# Smart Promise [![version][npm-version]][npm-url] [![License][license-image]][license-url] [![Build Status][travis-image]][travis-url] [![Downloads][npm-downloads]][npm-url] [![Coverage Status][codeclimate-coverage]][codeclimate-url]
 
 > Smart Promise is a Promise extension that provides filtered catch handler.
-
-[![Build Status][travis-image]][travis-url]
-[![Downloads][npm-downloads]][npm-url]
-[![Code Climate][codeclimate-quality]][codeclimate-url]
-[![Coverage Status][codeclimate-coverage]][codeclimate-url]
-[![Dependency Status][dependencyci-image]][dependencyci-url]
-[![Dependencies][david-image]][david-url]
 
 ## Benchamrks
 
@@ -21,7 +14,7 @@
 ## Install
 
 ```bash
-npm install --only=production --save smart-promise
+npm install --production --save smart-promise
 ```
 
 ## API
@@ -95,9 +88,9 @@ Smart.resolve(Library.action())
 ```
 
 ---
-> :copyright: [ahmadnassri.com](https://www.ahmadnassri.com/) &nbsp;&middot;&nbsp;
-> License: [ISC][license-url] &nbsp;&middot;&nbsp;
-> Github: [@ahmadnassri](https://github.com/ahmadnassri) &nbsp;&middot;&nbsp;
+> License: [ISC][license-url] &bull; 
+> Copyright: [ahmadnassri.com](https://www.ahmadnassri.com) &bull; 
+> Github: [@ahmadnassri](https://github.com/ahmadnassri) &bull; 
 > Twitter: [@ahmadnassri](https://twitter.com/ahmadnassri)
 
 [license-url]: http://choosealicense.com/licenses/isc/
@@ -111,11 +104,4 @@ Smart.resolve(Library.action())
 [npm-downloads]: https://img.shields.io/npm/dm/smart-promise.svg?style=flat-square
 
 [codeclimate-url]: https://codeclimate.com/github/ahmadnassri/smart-promise
-[codeclimate-quality]: https://img.shields.io/codeclimate/github/ahmadnassri/smart-promise.svg?style=flat-square
-[codeclimate-coverage]: https://img.shields.io/codeclimate/coverage/github/ahmadnassri/smart-promise.svg?style=flat-square
-
-[david-url]: https://david-dm.org/ahmadnassri/smart-promise
-[david-image]: https://img.shields.io/david/ahmadnassri/smart-promise.svg?style=flat-square
-
-[dependencyci-url]: https://dependencyci.com/github/ahmadnassri/smart-promise
-[dependencyci-image]: https://dependencyci.com/github/ahmadnassri/smart-promise/badge?style=flat-square
+[codeclimate-coverage]: https://api.codeclimate.com/v1/badges/51e5d4de12456c195287/test_coverage?style=flat-square
