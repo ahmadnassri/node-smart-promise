@@ -31,7 +31,7 @@ A filtered variant of `catch` (like other non-JS languages typically have) that 
 
 The catch handler that is first met that has eligible constructors specified, is the one that will be called.
 
-###### Example:
+###### Example
 
 ```js
 const Promise = require('smart-promise')
