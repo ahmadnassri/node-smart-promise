@@ -6,9 +6,9 @@
 
 [latest results](https://github.com/ahmadnassri/benchmark-node-promise-catch):
 
-```
-  bluebird      x  3,541 ops/sec ±1.70% (82 runs sampled)
-  smart-promise x 99,766 ops/sec ±1.24% (86 runs sampled)
+```text
+bluebird      x  3,541 ops/sec ±1.70% (82 runs sampled)
+smart-promise x 99,766 ops/sec ±1.24% (86 runs sampled)
 ```
 
 ## Install
@@ -33,8 +33,21 @@ The catch handler that is first met that has eligible constructors specified, is
 
 ###### Example
 
+Extend your existing `Promise` Libraries:
+
 ```js
-const Promise = require('smart-promise')
+const { Smart } = require('smart-promise')
+
+const Promise = Smart(MyPromiseLib)
+
+// or, use the shorthand
+const Promise = require('smart-promise')(MyPromiseLib)
+```
+
+Standalone:
+
+```js
+const { Promise } = require('smart-promise')
 ```
 
 ```js
@@ -77,15 +90,20 @@ Promise
   })
 ```
 
-You can also wrap it around existing promises, this is useful for managing 3rd party generated promises:
+You can also wrap it around existing promises resolvers, this is useful for managing 3rd party generated promises:
 
 ```js
-const Smart = require('smart-promise')
+const { Promise } = require('smart-promise')
 const Library = require('some-other-promise-producting-library')
 
-Smart.resolve(Library.action())
+Promise.resolve(Library.action())
   .catch('SomeError', error => {})
 ```
+
+## ESlint
+
+If you're using `ESlint` or similar tooling, please refer to [`prefer-promise-reject-errors`][prefer-promise-reject-errors]
+
 
 ---
 > License: [ISC][license-url] &bull; 
@@ -105,3 +123,5 @@ Smart.resolve(Library.action())
 
 [codeclimate-url]: https://codeclimate.com/github/ahmadnassri/smart-promise
 [codeclimate-coverage]: https://api.codeclimate.com/v1/badges/51e5d4de12456c195287/test_coverage?style=flat-square
+
+[prefer-promise-reject-errors]: https://eslint.org/docs/rules/prefer-promise-reject-errors

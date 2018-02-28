@@ -43,39 +43,48 @@ function isRegExpMatch (error, matches) {
   })
 }
 
-module.exports = class Smart extends Promise {
-  catch () {
-    // need at least 2
-    if (arguments.length < 2) {
-      return super.then.bind(this, null).apply(this, arguments)
+function SmartPromise (PromiseClass) {
+  // default to standard Promise
+  PromiseClass = PromiseClass || Promise
+
+  return class SmartPromise extends PromiseClass {
+    catch () {
+      // need at least 2
+      if (arguments.length < 2) {
+        return super.then.bind(this, null).apply(this, arguments)
+      }
+
+      let args = Array.from(arguments)
+      let handler = args.pop()
+
+      // we can't process this
+      if (typeof handler !== 'function') {
+        return super.catch.apply(this, arguments)
+      }
+
+      return super.then(null, error => {
+        // string handling
+        if (isRegExpMatch(error, args)) {
+          return super.then(null, handler)
+        }
+
+        // error objects
+        if (isInstance(error, args)) {
+          return super.then(null, handler)
+        }
+
+        // everything else
+        if (args.indexOf(error) > -1) {
+          return super.then(null, handler)
+        }
+
+        // throw back
+        throw error
+      })
     }
-
-    let args = Array.from(arguments)
-    let handler = args.pop()
-
-    // we can't process this
-    if (typeof handler !== 'function') {
-      return super.catch.apply(this, arguments)
-    }
-
-    return super.then(null, error => {
-      // string handling
-      if (isRegExpMatch(error, args)) {
-        return super.then(null, handler)
-      }
-
-      // error objects
-      if (isInstance(error, args)) {
-        return super.then(null, handler)
-      }
-
-      // everything else
-      if (args.indexOf(error) > -1) {
-        return super.then(null, handler)
-      }
-
-      // throw back
-      throw error
-    })
   }
 }
+
+module.exports = SmartPromise
+module.exports.Smart = SmartPromise
+module.exports.Promise = SmartPromise()
