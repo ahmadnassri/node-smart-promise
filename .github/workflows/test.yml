@@ -20,7 +20,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node-version: [10, 12, 13, 14]
+        node-version: [12, 13, 14]
 
     runs-on: ${{ matrix.os }}
 
@@ -33,7 +33,7 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: client-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ matrix.os }}-${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json') }}
 
       - run: npm ci
       - run: npm run test:ci
