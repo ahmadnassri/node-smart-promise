@@ -16,6 +16,7 @@ function isInstance (error, types) {
         return error.name === type
     }
 
+    /* istanbul ignore next */
     return false
   })
 }
@@ -26,6 +27,7 @@ function isRegExpMatch (error, matches) {
     error = error.message
   }
 
+  /* istanbul ignore if */
   if (typeof error !== 'string') {
     return false
   }
@@ -74,6 +76,7 @@ function SmartPromise (PromiseClass) {
         }
 
         // everything else
+        /* istanbul ignore if */
         if (args.indexOf(error) > -1) {
           return super.then(null, handler)
         }
