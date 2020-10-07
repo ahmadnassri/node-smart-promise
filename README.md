@@ -1,4 +1,25 @@
-# Smart Promise [![version][npm-version]][npm-url] [![License][license-image]][license-url] [![Build Status][travis-image]][travis-url] [![Downloads][npm-downloads]][npm-url] [![Coverage Status][codeclimate-coverage]][codeclimate-url]
+# Smart Promise
+
+[![license][license-img]][license-url]
+[![version][npm-img]][npm-url]
+[![super linter][super-linter-img]][super-linter-url]
+[![test][test-img]][test-url]
+[![release][release-img]][release-url]
+
+[license-url]: LICENSE
+[license-img]: https://badgen.net/github/license/ahmadnassri/node-smart-promise
+
+[npm-url]: https://www.npmjs.com/package/smart-promise
+[npm-img]: https://badgen.net/npm/v/smart-promise
+
+[super-linter-url]: https://github.com/ahmadnassri/node-smart-promise/actions?query=workflow%3Asuper-linter
+[super-linter-img]: https://github.com/ahmadnassri/node-smart-promise/workflows/super-linter/badge.svg
+
+[test-url]: https://github.com/ahmadnassri/node-smart-promise/actions?query=workflow%3Atest
+[test-img]: https://github.com/ahmadnassri/node-smart-promise/workflows/test/badge.svg
+
+[release-url]: https://github.com/ahmadnassri/node-smart-promise/actions?query=workflow%3Arelease
+[release-img]: https://github.com/ahmadnassri/node-smart-promise/workflows/release/badge.svg
 
 > Smart Promise is a Promise extension that provides filtered catch handler.
 
@@ -103,25 +124,3 @@ Promise.resolve(Library.action())
 ## ESlint
 
 If you're using `ESlint` or similar tooling, please refer to [`prefer-promise-reject-errors`][prefer-promise-reject-errors]
-
-
----
-> License: [ISC][license-url] &bull; 
-> Copyright: [ahmadnassri.com](https://www.ahmadnassri.com) &bull; 
-> Github: [@ahmadnassri](https://github.com/ahmadnassri) &bull; 
-> Twitter: [@ahmadnassri](https://twitter.com/ahmadnassri)
-
-[license-url]: http://choosealicense.com/licenses/isc/
-[license-image]: https://img.shields.io/github/license/ahmadnassri/smart-promise.svg?style=flat-square
-
-[travis-url]: https://travis-ci.org/ahmadnassri/smart-promise
-[travis-image]: https://img.shields.io/travis/ahmadnassri/smart-promise.svg?style=flat-square
-
-[npm-url]: https://www.npmjs.com/package/smart-promise
-[npm-version]: https://img.shields.io/npm/v/smart-promise.svg?style=flat-square
-[npm-downloads]: https://img.shields.io/npm/dm/smart-promise.svg?style=flat-square
-
-[codeclimate-url]: https://codeclimate.com/github/ahmadnassri/smart-promise
-[codeclimate-coverage]: https://api.codeclimate.com/v1/badges/51e5d4de12456c195287/test_coverage?style=flat-square
-
-[prefer-promise-reject-errors]: https://eslint.org/docs/rules/prefer-promise-reject-errors

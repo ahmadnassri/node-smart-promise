@@ -24,14 +24,12 @@
     "url": "https://github.com/ahmadnassri/smart-promise/issues"
   },
   "scripts": {
-    "pretest": "npm run test:codeclimate",
-    "test": "npm run test:tap",
-    "test:codeclimate": ".scripts/codeclimate analyze",
-    "test:tap": "tap test --coverage-report=lcov --no-browser",
-    "coverage": "opener coverage/lcov-report/index.html"
+    "test": "tap test --no-coverage",
+    "test:watch": "tap test --watch",
+    "test:ci": "tap test --100 --color --coverage-report=lcov --no-browser"
   },
   "devDependencies": {
-    "@ahmadnassri/error": "^1.1.0",
+    "@ahmadnassri/error": "^1.1.2",
     "tap": "^14.10.8"
   }
 }

@@ -54,8 +54,8 @@ function SmartPromise (PromiseClass) {
         return super.then.bind(this, null).apply(this, arguments)
       }
 
-      let args = Array.from(arguments)
-      let handler = args.pop()
+      const args = Array.from(arguments)
+      const handler = args.pop()
 
       // we can't process this
       if (typeof handler !== 'function') {
