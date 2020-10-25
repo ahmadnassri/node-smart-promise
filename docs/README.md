@@ -1,25 +1,15 @@
-# Smart Promise
-
-Smart Promise is a Promise extension that provides filtered catch handler.
-
-[![license][license-img]][license-url]
-[![version][npm-img]][npm-url]
-[![super linter][super-linter-img]][super-linter-url]
-[![test][test-img]][test-url]
-[![release][release-img]][release-url]
-
 ## Benchamrks
 
 [latest results](https://github.com/ahmadnassri/benchmark-node-promise-catch)
 
-``` text
+```text
 bluebird      x  3,541 ops/sec ±1.70% (82 runs sampled)
 smart-promise x 99,766 ops/sec ±1.24% (86 runs sampled)
 ```
 
 ## Install
 
-``` bash
+```bash
 npm install --production --save smart-promise
 ```
 
@@ -41,7 +31,7 @@ The catch handler that is first met that has eligible constructors specified, is
 
 Extend your existing `Promise` Libraries:
 
-``` js
+```js
 const { Smart } = require('smart-promise')
 
 const Promise = Smart(MyPromiseLib)
@@ -52,11 +42,11 @@ const Promise = require('smart-promise')(MyPromiseLib)
 
 Standalone:
 
-``` js
+```js
 const { Promise } = require('smart-promise')
 ```
 
-``` js
+```js
 Promise
   .then(_ => return a.b.c.d())
 
@@ -79,7 +69,7 @@ Promise
 
 You may also add multiple filters for a catch handler:
 
-``` js
+```js
 Promise
   .then(_ => return a.b.c.d())
 
@@ -98,7 +88,7 @@ Promise
 
 You can also wrap it around existing promises resolvers, this is useful for managing 3rd party generated promises:
 
-``` js
+```js
 const { Promise } = require('smart-promise')
 const Library = require('some-other-promise-producting-library')
 
@@ -108,23 +98,6 @@ Promise.resolve(Library.action())
 
 ## ESlint
 
-If you're using `ESlint` or similar tooling, please refer to [`prefer-promise-reject-errors`](https://eslint.org/docs/rules/prefer-promise-reject-errors)
+If you're using `ESlint` or similar tooling, please refer to [`prefer-promise-reject-errors`]
 
-----
-> Author: [Ahmad Nassri](https://www.ahmadnassri.com/) &bull;
-> Twitter: [@AhmadNassri](https://twitter.com/AhmadNassri)
-
-[license-url]: LICENSE
-[license-img]: https://badgen.net/github/license/ahmadnassri/node-template-literals-engine
-
-[npm-url]: https://www.npmjs.com/package/smart-promise
-[npm-img]: https://badgen.net/npm/v/smart-promise
-
-[super-linter-url]: https://github.com/ahmadnassri/node-template-literals-engine/actions?query=workflow%3Asuper-linter
-[super-linter-img]: https://github.com/ahmadnassri/node-template-literals-engine/workflows/super-linter/badge.svg
-
-[test-url]: https://github.com/ahmadnassri/node-template-literals-engine/actions?query=workflow%3Atest
-[test-img]: https://github.com/ahmadnassri/node-template-literals-engine/workflows/test/badge.svg
-
-[release-url]: https://github.com/ahmadnassri/node-template-literals-engine/actions?query=workflow%3Arelease
-[release-img]: https://github.com/ahmadnassri/node-template-literals-engine/workflows/release/badge.svg
+[`prefer-promise-reject-errors`]: https://eslint.org/docs/rules/prefer-promise-reject-errors

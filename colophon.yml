@@ -1,0 +1,8 @@
+version: 2.0
+
+id: smart-promise
+
+about:
+  title: Smart Promise
+  description: Smart Promise is a Promise extension that provides filtered catch handler.
+  repository: ahmadnassri/node-template-literals-engine
