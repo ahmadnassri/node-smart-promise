@@ -3,10 +3,10 @@
 Smart Promise is a Promise extension that provides filtered catch handler.
 
 [![license][license-img]][license-url]
-[![version][npm-img]][npm-url]
+[![release][release-img]][release-url]
 [![super linter][super-linter-img]][super-linter-url]
 [![test][test-img]][test-url]
-[![release][release-img]][release-url]
+[![semantic][semantic-img]][semantic-url]
 
 ## Benchamrks
 
@@ -117,8 +117,8 @@ If you're using `ESlint` or similar tooling, please refer to [`prefer-promise-re
 [license-url]: LICENSE
 [license-img]: https://badgen.net/github/license/ahmadnassri/node-template-literals-engine
 
-[npm-url]: https://www.npmjs.com/package/smart-promise
-[npm-img]: https://badgen.net/npm/v/smart-promise
+[release-url]: https://github.com/ahmadnassri/node-template-literals-engine/releases
+[release-img]: https://badgen.net/github/release/ahmadnassri/node-template-literals-engine
 
 [super-linter-url]: https://github.com/ahmadnassri/node-template-literals-engine/actions?query=workflow%3Asuper-linter
 [super-linter-img]: https://github.com/ahmadnassri/node-template-literals-engine/workflows/super-linter/badge.svg
@@ -126,5 +126,5 @@ If you're using `ESlint` or similar tooling, please refer to [`prefer-promise-re
 [test-url]: https://github.com/ahmadnassri/node-template-literals-engine/actions?query=workflow%3Atest
 [test-img]: https://github.com/ahmadnassri/node-template-literals-engine/workflows/test/badge.svg
 
-[release-url]: https://github.com/ahmadnassri/node-template-literals-engine/actions?query=workflow%3Arelease
-[release-img]: https://github.com/ahmadnassri/node-template-literals-engine/workflows/release/badge.svg
+[semantic-url]: https://github.com/ahmadnassri/node-template-literals-engine/actions?query=workflow%3Arelease
+[semantic-img]: https://badgen.net/badge/📦/semantically%20released/blue
