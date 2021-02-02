@@ -31,7 +31,7 @@ The same native [Promise API](https://developer.mozilla.org/en/docs/Web/JavaScri
 
 Behaves normally as per the native [Promise API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)
 
-### .catch(class ErrorClass | class CustomErrorClass | ... , onRejected)
+### .catch(class ErrorClass \| class CustomErrorClass \| ... , onRejected)
 
 A filtered variant of `catch` (like other non-JS languages typically have) that lets you only handle specific errors.
 
