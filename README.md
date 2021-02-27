@@ -10,7 +10,7 @@ Smart Promise is a Promise extension that provides filtered catch handler.
 
 ## Benchamrks
 
-[latest results](https://github.com/ahmadnassri/benchmark-node-promise-catch)
+[latest results][]
 
 ``` text
 bluebird      x  3,541 ops/sec ±1.70% (82 runs sampled)
@@ -25,11 +25,11 @@ npm install --production --save smart-promise
 
 ## API
 
-The same native [Promise API](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise) applies, the only difference is the `catch()` method.
+The same native [Promise API][] applies, the only difference is the `catch()` method.
 
 ### .catch(onRejected)
 
-Behaves normally as per the native [Promise API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)
+Behaves normally as per the native [Promise API][1]
 
 ### .catch(class ErrorClass \| class CustomErrorClass \| ... , onRejected)
 
@@ -108,7 +108,12 @@ Promise.resolve(Library.action())
 
 ## ESlint
 
-If you're using `ESlint` or similar tooling, please refer to [`prefer-promise-reject-errors`](https://eslint.org/docs/rules/prefer-promise-reject-errors)
+If you're using `ESlint` or similar tooling, please refer to [`prefer-promise-reject-errors`][]
+
+  [latest results]: https://github.com/ahmadnassri/benchmark-node-promise-catch
+  [Promise API]: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise
+  [1]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch
+  [`prefer-promise-reject-errors`]: https://eslint.org/docs/rules/prefer-promise-reject-errors
 
 ----
 > Author: [Ahmad Nassri](https://www.ahmadnassri.com/) &bull;
