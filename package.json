@@ -9,7 +9,9 @@
     "url": "https://github.com/ahmadnassri/smart-promise.git"
   },
   "license": "MIT",
-  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/ahmadnassri/smart-promise/issues"
+  },
   "keywords": [
     "smart",
     "promise"
@@ -20,9 +22,7 @@
   "files": [
     "index.js"
   ],
-  "bugs": {
-    "url": "https://github.com/ahmadnassri/smart-promise/issues"
-  },
+  "main": "index.js",
   "scripts": {
     "test": "tap test --no-coverage",
     "test:watch": "tap test --watch",
