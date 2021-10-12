@@ -8,10 +8,14 @@
     "type": "git",
     "url": "https://github.com/ahmadnassri/smart-promise.git"
   },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ahmadnassri/smart-promise/issues"
   },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/ahmadnassri"
+  },
+  "license": "MIT",
   "keywords": [
     "smart",
     "promise"
@@ -26,10 +30,11 @@
   "scripts": {
     "test": "tap test --no-coverage",
     "test:watch": "tap test --watch",
-    "test:ci": "tap test --100 --color --coverage-report=lcov --no-browser"
+    "test:ci": "tap test --100",
+    "test:report": "opener coverage/lcov-report/index.html"
   },
   "devDependencies": {
     "@ahmadnassri/error": "^1.1.2",
-    "tap": "^14.10.8"
+    "tap": "^15.0.10"
   }
 }
