@@ -120,16 +120,16 @@ If you're using `ESlint` or similar tooling, please refer to [`prefer-promise-re
 > Twitter: [@AhmadNassri](https://twitter.com/AhmadNassri)
 
 [license-url]: LICENSE
-[license-img]: https://badgen.net/github/license/ahmadnassri/node-template-literals-engine
+[license-img]: https://badgen.net/github/license/ahmadnassri/node-smart-promise
 
-[release-url]: https://github.com/ahmadnassri/node-template-literals-engine/releases
-[release-img]: https://badgen.net/github/release/ahmadnassri/node-template-literals-engine
+[release-url]: https://github.com/ahmadnassri/node-smart-promise/releases
+[release-img]: https://badgen.net/github/release/ahmadnassri/node-smart-promise
 
-[super-linter-url]: https://github.com/ahmadnassri/node-template-literals-engine/actions?query=workflow%3Asuper-linter
-[super-linter-img]: https://github.com/ahmadnassri/node-template-literals-engine/workflows/super-linter/badge.svg
+[super-linter-url]: https://github.com/ahmadnassri/node-smart-promise/actions?query=workflow%3Asuper-linter
+[super-linter-img]: https://github.com/ahmadnassri/node-smart-promise/workflows/super-linter/badge.svg
 
-[test-url]: https://github.com/ahmadnassri/node-template-literals-engine/actions?query=workflow%3Atest
-[test-img]: https://github.com/ahmadnassri/node-template-literals-engine/workflows/test/badge.svg
+[test-url]: https://github.com/ahmadnassri/node-smart-promise/actions?query=workflow%3Atest
+[test-img]: https://github.com/ahmadnassri/node-smart-promise/workflows/test/badge.svg
 
-[semantic-url]: https://github.com/ahmadnassri/node-template-literals-engine/actions?query=workflow%3Arelease
+[semantic-url]: https://github.com/ahmadnassri/node-smart-promise/actions?query=workflow%3Arelease
 [semantic-img]: https://badgen.net/badge/📦/semantically%20released/blue

@@ -3,13 +3,13 @@
   "name": "smart-promise",
   "description": "a Promise extension that provides filtered catch handler",
   "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
-  "homepage": "https://github.com/ahmadnassri/smart-promise",
+  "homepage": "https://github.com/ahmadnassri/node-smart-promise",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ahmadnassri/smart-promise.git"
+    "url": "https://github.com/ahmadnassri/node-smart-promise.git"
   },
   "bugs": {
-    "url": "https://github.com/ahmadnassri/smart-promise/issues"
+    "url": "https://github.com/ahmadnassri/node-smart-promise/issues"
   },
   "funding": {
     "type": "individual",
