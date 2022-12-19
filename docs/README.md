@@ -10,7 +10,7 @@ smart-promise x 99,766 ops/sec ±1.24% (86 runs sampled)
 ## Install
 
 ```bash
-npm install --production --save smart-promise
+npm install smart-promise
 ```
 
 ## API
