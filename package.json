@@ -35,6 +35,6 @@
   },
   "devDependencies": {
     "@ahmadnassri/error": "^2.0.0",
-    "tap": "^16.3.0"
+    "tap": "^21.7.0"
   }
 }
